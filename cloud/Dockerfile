@@ -21,9 +21,9 @@ RUN yarn build
 
 # ---
 
-FROM docker.io/library/node:${NODE_VERSION}-alpine as app
+# FROM docker.io/library/node:${NODE_VERSION}-alpine as app
 
-WORKDIR /app
+# WORKDIR /app
 
 ARG APP_KEYS
 ARG API_TOKEN_SALT
@@ -42,13 +42,13 @@ ENV JWT_SECRET $JWT_SECRET
 RUN apk add --no-cache sqlite
 
 # Copy builded files from last stage
-COPY --from=builder /app/.yarn .yarn
-COPY --from=builder /app/package.json /app/*.lock /app/.yarnrc.yml ./
-COPY --from=builder /app/public/ ./public
-COPY --from=builder /app/dist/ ./dist
+# COPY --from=builder /app/.yarn .yarn
+# COPY --from=builder /app/package.json /app/*.lock /app/.yarnrc.yml ./
+# COPY --from=builder /app/public/ ./public
+# COPY --from=builder /app/dist/ ./dist
 
-RUN echo JWT_SECRET
+RUN echo $JWT_SECRET
 
-RUN yarn workspaces focus --production
+# RUN yarn workspaces focus --production
 
 CMD ["yarn", "start"]
