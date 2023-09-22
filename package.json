@@ -14,7 +14,7 @@
     "p": "git push --follow-tags",
     "rl": "run-s pl clean build release p",
     "cb": "run-s clean build",
-    "format": "run-s format:*",
+    "format": "run format:prettier",
     "format:prettier": "prettier . --ignore-path .gitignore --write",
     "start": "strapi start",
     "watch": "strapi develop",
