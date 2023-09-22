@@ -5,7 +5,7 @@ networks:
     external: true
 
 services:
-  website:
+  cms:
     image: $CMS_IMAGE
 
     cpu_count: 1
