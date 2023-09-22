@@ -28,12 +28,14 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV NODE_POST 80
 
-# Copy builded files from last stage
-COPY --from=builder /app/dist/ ./dist
-COPY --from=builder /app/public/ ./public
+RUN apk add --no-cache sqlite
 
-COPY --from=builder /app/package.json /app/*.lock /app/.yarnrc.yml ./
+# Copy builded files from last stage
 COPY --from=builder /app/.yarn .yarn
+COPY --from=builder /app/package.json /app/*.lock /app/.yarnrc.yml ./
+COPY --from=builder /app/.env ./
+COPY --from=builder /app/public/ ./public
+COPY --from=builder /app/dist/ ./dist
 
 RUN yarn workspaces focus --production
 
