@@ -22,7 +22,7 @@ services:
     volumes:
       - type: bind
         source: ./_data/data.db
-        target: ./db/
+        target: /app/db/
         bind:
           create_host_path: true
 
