@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reading_lists",
+  "info": {
+    "singularName": "reading-list",
+    "pluralName": "reading-lists",
+    "displayName": "Reading List",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "regex": "https?:\\/\\/(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{1,256}\\.[a-zA-Z0-9()]{1,6}\\b([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "keyword": {
+      "type": "text",
+      "required": false
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Reference",
+        "Blog",
+        "Blog Post",
+        "Video",
+        "Project"
+      ],
+      "required": true,
+      "default": "Blog Post"
+    }
+  }
+}
