@@ -17,6 +17,8 @@ services:
     networks:
       alwatr-public-network:
 
+    env_file: .env
+
     logging:
       driver: json-file
       options:
