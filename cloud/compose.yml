@@ -19,6 +19,13 @@ services:
 
     env_file: .env
 
+    volumes:
+      - type: bind
+        source: ./_data/data.db
+        target: ./db/
+        bind:
+          create_host_path: true
+
     logging:
       driver: json-file
       options:
