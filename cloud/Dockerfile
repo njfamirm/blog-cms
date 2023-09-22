@@ -25,8 +25,12 @@ FROM docker.io/library/node:${NODE_VERSION}-alpine as app
 
 WORKDIR /app
 
+ENV NODE_ENV production
+ENV NODE_POST 80
+
 # Copy builded files from last stage
-COPY --from=builder /app/dist/ ./
+COPY --from=builder /app/dist/ ./dist
+COPY --from=builder /app/public/ ./public
 
 COPY --from=builder /app/package.json /app/*.lock /app/.yarnrc.yml ./
 COPY --from=builder /app/.yarn .yarn
