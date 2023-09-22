@@ -1,0 +1,23 @@
+{
+  "name": "blog-cms",
+  "private": true,
+  "version": "0.0.0",
+  "description": "My blog CMS",
+  "author": "S. Amir Mohammad Najafi <njfamirm@gmail.com>",
+  "scripts": {
+    "watch": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build"
+  },
+  "dependencies": {
+    "@strapi/plugin-i18n": "4.13.6",
+    "@strapi/plugin-users-permissions": "4.13.6",
+    "@strapi/strapi": "4.13.6",
+    "better-sqlite3": "8.6.0"
+  },
+  "strapi": {
+    "uuid": "7fac8130-ee49-4402-bbdf-63a3da0ab00d"
+  },
+  "license": "MIT",
+  "packageManager": "yarn@3.6.3"
+}
