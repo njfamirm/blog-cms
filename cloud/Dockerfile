@@ -25,11 +25,12 @@ FROM docker.io/library/node:${NODE_VERSION}-alpine as app
 
 WORKDIR /app
 
-ENV PORT=80
-EXPOSE 80
-
 # Copy builded files from last stage
 COPY --from=builder /app/dist/ ./
-COPY --from=builder /app/package.json ./
+
+COPY --from=builder /app/package.json /app/*.lock /app/.yarnrc.yml ./
+COPY --from=builder /app/.yarn .yarn
+
+RUN yarn workspaces focus --production
 
 CMD ["yarn", "start"]
