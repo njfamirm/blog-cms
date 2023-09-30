@@ -1,7 +1,7 @@
 {
   "name": "blog-cms",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "My blog CMS",
   "author": "S. Amir Mohammad Najafi <njfamirm@gmail.com>",
   "scripts": {
