@@ -6,6 +6,8 @@ on:
   workflow_dispatch:
 
   push:
+    tags:
+      - 'v*.*.*'
     branches:
       - main
 
@@ -69,6 +71,7 @@ jobs:
             type=semver,enable=true,pattern={{major}}
             type=semver,enable=true,pattern={{major}}.{{minor}}
             type=semver,enable=true,pattern={{version}}
+            type=ref,enable=true,event=pr
             type=ref,enable=true,event=branch
 
       - name: 🚀 Build and push container image
