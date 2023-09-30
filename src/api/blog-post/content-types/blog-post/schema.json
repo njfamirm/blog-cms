@@ -24,9 +24,7 @@
       "type": "text"
     },
     "cover": {
-      "allowedTypes": [
-        "images"
-      ],
+      "allowedTypes": ["images"],
       "type": "media",
       "multiple": false,
       "required": false

@@ -30,13 +30,7 @@
     },
     "type": {
       "type": "enumeration",
-      "enum": [
-        "Reference",
-        "Blog",
-        "Blog Post",
-        "Video",
-        "Project"
-      ],
+      "enum": ["Reference", "Blog", "Blog Post", "Video", "Project"],
       "required": true,
       "default": "Blog Post"
     }
