@@ -7,7 +7,7 @@
   "scripts": {
     "f": "yarn format",
     "s": "yarn start",
-    "w": "yarn start",
+    "w": "yarn watch",
     "b": "yarn build",
     "c": "yarn clean",
     "pl": "git pull",

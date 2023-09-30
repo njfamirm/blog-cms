@@ -30,7 +30,6 @@ package-lock.json
 !.yarn/sdks
 !.yarn/versions
 
-db
 _data
 .cache
 .strapi-updater.json
