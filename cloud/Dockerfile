@@ -37,4 +37,4 @@ ENV NODE_ENV production
 
 RUN yarn build
 
-CMD ["yarn", "strapi", "start"]
+CMD ["yarn", "strapi", "develop"]
