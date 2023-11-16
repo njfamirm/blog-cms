@@ -31,7 +31,11 @@
     "@strapi/plugin-i18n": "4.15.4",
     "@strapi/plugin-users-permissions": "4.15.4",
     "@strapi/strapi": "4.15.4",
-    "better-sqlite3": "9.1.1"
+    "better-sqlite3": "9.1.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1"
   },
   "strapi": {
     "uuid": "7fac8130-ee49-4402-bbdf-63a3da0ab00d"
